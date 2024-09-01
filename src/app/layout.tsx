@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { BIZ_UDPGothic } from "next/font/google";
 import "./globals.css";
+import {clsx} from "clsx";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+
+const bizUdPGothic = BIZ_UDPGothic({
+  weight: ['400', '700'],
+  preload: false,
+  variable: '--font-biz-ud-p-gothic',
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ja">
+      <body className={clsx(bizUdPGothic.variable, 'font-sans leading-normal')}>
+        <div className={'flex flex-col gap-8'}>
+          <Header/>
+          <div>{children}</div>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }
