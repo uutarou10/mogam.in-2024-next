@@ -23,8 +23,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={clsx(bizUdPGothic.variable, 'font-sans leading-normal')}>
-        <div className={'flex flex-col gap-8'}>
+      <body
+        className={clsx(
+          bizUdPGothic.variable,
+          'font-sans leading-normal bg-bg-brand',
+        )}
+      >
+        <div
+          className={'flex flex-col gap-8 bg-repeat-x bg-[white] pt-8'}
+          style={{ backgroundImage: 'url(/wave_flip.svg)' }}
+        >
           <Header />
           <div>{children}</div>
           <Footer />
