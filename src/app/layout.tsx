@@ -22,15 +22,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={'h-full'}>
       <body
         className={clsx(
           bizUdPGothic.variable,
-          'font-sans leading-normal bg-bg-brand',
+          'font-sans leading-normal bg-bg-brand min-h-full',
         )}
       >
         <div
-          className={'flex flex-col gap-8 bg-repeat-x bg-[white] pt-8'}
+          className={
+            'grid grid-rows-[auto_1fr_auto] gap-8 bg-repeat-x bg-[white] pt-8 min-h-screen'
+          }
           style={{ backgroundImage: 'url(/wave_flip.svg)' }}
         >
           <Header />
