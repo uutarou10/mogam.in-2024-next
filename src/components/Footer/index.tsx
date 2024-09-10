@@ -12,7 +12,9 @@ export default function Footer() {
           'max-w-screen-xl mx-auto text-text-invert grid gap-3 bg-bg-brand'
         }
       >
-        <span className={'font-bold text-xl'}>mogam.in</span>
+        <Link href={'/'} className={'font-bold text-xl'}>
+          mogam.in
+        </Link>
         <ul className={'text-xs flex flex-col gap-1'}>
           <Link href={'/posts'}>Posts</Link>
           <Link href={'/about'}>About</Link>
