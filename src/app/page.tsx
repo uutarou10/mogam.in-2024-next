@@ -1,12 +1,12 @@
 import Header from '@/components/Header';
-import { SectionHeading } from '@/components/SectionHeading';
+import { Heading } from '../components/Heading';
 import PostCard from '@/components/PostCard';
 
 export default function Home() {
   return (
     <main className={'flex flex-col gap-16 px-4 max-w-screen-xl mx-auto'}>
       <section className={'grid gap-5'}>
-        <SectionHeading>Recently Posts</SectionHeading>
+        <Heading>Recently Posts</Heading>
         <div
           className={'grid grid-cols-1 gap-8 md:gap-4 lg:gap-8 md:grid-cols-3'}
         >
@@ -16,8 +16,8 @@ export default function Home() {
           <PostCard />
         </div>
       </section>
-      <section className={'grid gap-5 text-text-primary'}>
-        <SectionHeading>About</SectionHeading>
+      <section className={'grid gap-5 text-text-primary text-sm'}>
+        <Heading>About</Heading>
         <img
           src={'/icon.jpg'}
           alt={'アイコン画像'}
