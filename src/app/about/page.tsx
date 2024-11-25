@@ -1,4 +1,5 @@
 import { Heading } from '@/components/Heading';
+import { Building } from 'lucide-react';
 
 export default function Page() {
   return (
@@ -24,19 +25,17 @@ export default function Page() {
         <Heading level={3}>職歴</Heading>
         <section className={'grid gap-2'}>
           <JobHistoryHeader
-            companyName={'Fringe81株式会社(現Unipos株式会社)'}
-            dateRange={'2019年4月〜2021年8月'}
+            companyName={'株式会社KAEN'}
+            dateRange={'2023年8月〜現在'}
           />
           <p>
-            大学卒業後、2019年4月に新卒入社。
-            自社プロダクト「Unipos」のスマートフォンアプリ開発チームへ配属され、React
-            Native/TypeScriptを用いた開発を行っていました。
+            小さなチームで、自分の力でプロダクトを作り会社へ貢献するという経験をしたいと思い、当時正規メンバーが役員2名だけだった株式会社KAENへダイブ。
           </p>
           <p>
-            アプリケーションの新規機能開発に加え、リアーキテクチャの実施や、ネイティブアプリケーションであるが故にWebクライアントとの機能差分が発生し、ユーザー体験を阻害しているという課題の解決のためにOTAアップデートを行える仕組みの提案から運用方法の整備などを主導しました。
+            入社以前よりあったセールスプラットフォーム「TAAAN」のシステムフルリニューアルプロジェクトに参加。技術選定や設計、実装などを一通り行っています。（現在進行形でフルリニューアルは進行中…）
           </p>
           <p>
-            その他にも、関数型プログラミングを採用したAltJSであるElmを用いたWebフロントエンドアプリケーションの開発を経験しました。
+            エンジニアとしての仕事だけではなく、既存システム利用顧客の運用サポート、社内業務効率改善のためのアプリケーション開発、会社としてのセキュリティ認証資格の取得、果てはオフィス移転の手続きなど、スタートアップなんでもやる人と化しています。
           </p>
         </section>
 
@@ -62,17 +61,19 @@ export default function Page() {
 
         <section className={'grid gap-2'}>
           <JobHistoryHeader
-            companyName={'株式会社KAEN'}
-            dateRange={'2023年8月〜'}
+            companyName={'Fringe81株式会社(現Unipos株式会社)'}
+            dateRange={'2019年4月〜2021年8月'}
           />
           <p>
-            小さなチームで、自分の力でプロダクトを作り会社へ貢献するという経験をしたいと思い、当時正規メンバーが役員2名だけだった株式会社KAENへダイブ。
+            大学卒業後、2019年4月に新卒入社。
+            自社プロダクト「Unipos」のスマートフォンアプリ開発チームへ配属され、React
+            Native/TypeScriptを用いた開発を行っていました。
           </p>
           <p>
-            入社以前よりあったセールスプラットフォーム「TAAAN」のシステムフルリニューアルプロジェクトに参加。技術選定や設計、実装などを一通り行っています。（現在進行形でフルリニューアルは進行中…）
+            アプリケーションの新規機能開発に加え、リアーキテクチャの実施や、ネイティブアプリケーションであるが故にWebクライアントとの機能差分が発生し、ユーザー体験を阻害しているという課題の解決のためにOTAアップデートを行える仕組みの提案から運用方法の整備などを主導しました。
           </p>
           <p>
-            エンジニアとしての仕事だけではなく、既存システム利用顧客の運用サポート、社内業務効率改善のためのアプリケーション開発、会社としてのセキュリティ認証資格の取得、果てはオフィス移転の手続きなど、スタートアップなんでもやる人と化しています。
+            その他にも、関数型プログラミングを採用したAltJSであるElmを用いたWebフロントエンドアプリケーションの開発を経験しました。
           </p>
         </section>
       </article>
@@ -96,7 +97,12 @@ function JobHistoryHeader({
   dateRange: string;
 }) {
   return (
-    <hgroup className={'grid gap-0.5'}>
+    <hgroup
+      className={
+        'grid gap-0.5 grid-cols-[auto_minmax(0,1fr)] grid-rows-2 items-center'
+      }
+    >
+      <Building className={'row-span-2 mr-2'} size={'24'} />
       <h4 className={'text-base'}>{companyName}</h4>
       <p className={'text-text-secondary text-xs'}>{dateRange}</p>
     </hgroup>
